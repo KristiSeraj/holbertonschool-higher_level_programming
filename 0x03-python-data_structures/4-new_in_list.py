@@ -2,7 +2,7 @@
 def new_in_list(my_list, idx, element):
     new = my_list.copy()
     if idx < 0 or idx not in range(len(my_list)):
-            return new
+        return new
     else:
         new[idx] = element
     return new
