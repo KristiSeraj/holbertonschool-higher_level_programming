@@ -15,5 +15,5 @@ def roman_to_int(roman_string):
             i = i + 2
         else:
             num += rom_dict[roman_string[i]]
-            i=i+1
+            i = i + 1
     return num
