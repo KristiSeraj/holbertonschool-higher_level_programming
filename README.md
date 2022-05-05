@@ -11,3 +11,5 @@
 - [0x03.Python - Data Structures: Lists, Tuples](https://github.com/KristiSeraj/holbertonschool-higher_level_programming/tree/main/0x03-python-data_structures)
 
 - [0x04.Python - More Data Structures: Set, Dictionary](https://github.com/KristiSeraj/holbertonschool-higher_level_programming/tree/main/0x04-python-more_data_structures)
+
+- [0x17.C - Doubly linked lists](https://github.com/KristiSeraj/holbertonschool-higher_level_programming/tree/main/0x17-doubly_linked_lists)
