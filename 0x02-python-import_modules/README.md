@@ -12,7 +12,7 @@
 
 - [102-magic_calculation.py](https://github.com/KristiSeraj/holbertonschool-higher_level_programming/blob/main/0x02-python-import_modules/102-magic_calculation.py) - *Python function `def magic_calculation(a, b):` that calculate numbers exactly like a Python bytecode*
 
-- [103-fast_alphabet.py](https://github.com/KristiSeraj/holbertonschool-higher_level_programming/blob/main/0x02-python-import_modules/103-fast_alphabet.py) - *Python script that prints the alphabet in uppercase, followed by a new line with*
+- [103-fast_alphabet.py](https://github.com/KristiSeraj/holbertonschool-higher_level_programming/blob/main/0x02-python-import_modules/103-fast_alphabet.py) - *Python script that prints the alphabet in uppercase, followed by a new line*
 
 - [2-args.py](https://github.com/KristiSeraj/holbertonschool-higher_level_programming/blob/main/0x02-python-import_modules/2-args.py) - *Python script that prints the number of and the list of its arguments*
 
