@@ -1,4 +1,4 @@
-# Python, Hello World
+# Hello World
 
 - [test_files_c](https://github.com/KristiSeraj/holbertonschool-higher_level_programming/tree/main/0x00-python-hello_world/test_files_c) - *Directory containing test files for C projects*
 
