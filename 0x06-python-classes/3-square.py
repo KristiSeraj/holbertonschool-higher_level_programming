@@ -3,15 +3,13 @@
 
 
 class Square:
-    """Defining square class"""
+    """__init__method that initialize a square class
 
-    def __init__(self, size=0):
-    """__init__ - initialize a square class
-    
     Args:
-    size - size of square intialize 0
+        size: size of square
     """
 
+    def __init__(self, size=0):
         self.__size = size
         if type(size) != int:
             raise TypeError("size must be an integer")
@@ -19,8 +17,10 @@ class Square:
             raise ValueError("size must be >= 0")
 
     def area(self):
-        """area - function that calculates the area of square
-        Return: returns the area of the square
+        """Calculates the area of square
+
+        Return: 
+            returns the area of the square
         """
 
         return self.__size * self.__size
