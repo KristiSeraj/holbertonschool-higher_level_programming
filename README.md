@@ -12,3 +12,6 @@
 
 - [0x04.Python - More Data Structures: Set, Dictionary](https://github.com/KristiSeraj/holbertonschool-higher_level_programming/tree/main/0x04-python-more_data_structures)
 
+- [0x05.Python - Exceptions](https://github.com/KristiSeraj/holbertonschool-higher_level_programming/tree/main/0x05-python-exceptions)
+
+- [0x06.Python - Classes and Objects](https://github.com/KristiSeraj/holbertonschool-higher_level_programming/tree/main/0x06-python-classes)
