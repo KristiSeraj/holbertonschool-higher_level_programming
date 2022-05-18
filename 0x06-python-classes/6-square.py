@@ -6,6 +6,7 @@ class Square:
     """__init__method that initialize a square class
     Args:
         size: size of square
+        position: position of square
     """
 
     def __init__(self, size=0, position=(0, 0)):
@@ -14,7 +15,7 @@ class Square:
 
     @property
     def size(self):
-        """Retrieves the instance attribute"""
+        """Retrieves the instance attribute for size"""
 
         return self.__size
 
@@ -38,7 +39,8 @@ class Square:
     def position(self, value):
         """Checks for erros for position and sets value to position"""
 
-        if type(value) != tuple or len(value) != 2 or type(value[0]) != int or type(value[1]) != int or value[0] < 0 or value[1] < 0:
+        if type(value) != tuple or len(value) != 2 or type(value[0]) != int\
+                or type(value[1]) != int or value[0] < 0 or value[1] < 0:
             raise TypeError("position must be a tuple of 2 positive integers")
         self.__position = value
 
