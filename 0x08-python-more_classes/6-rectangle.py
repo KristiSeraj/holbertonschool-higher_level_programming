@@ -9,6 +9,7 @@ class Rectangle:
         number_of_instances - shows the number of instances created
         and deleted
     """
+
     number_of_instances = 0
 
     def __init__(self, width=0, height=0):
