@@ -6,7 +6,6 @@ def add_integer(a, b=98):
     """Returns the addition of a and b
 
     Float args are typecasted to ints
-    
     Raises:
         TypeError: if a or b is not int or float
     """
