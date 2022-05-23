@@ -3,15 +3,21 @@
 
 
 class Rectangle:
+    """Rectangle class created with width and height
+
+    Attributes:
+        number_of_instances - shows the number of instances created
+        and deleted
+    """
     number_of_instances = 0
+
+    def __init__(self, width=0, height=0):
     """__init__ - initialize a rectangle class
 
     Args:
         width (int): width of the rectangle
         height (int): height of the rectangle
     """
-
-    def __init__(self, width=0, height=0):
         self.height = height
         self.width = width
         Rectangle.number_of_instances += 1
