@@ -3,16 +3,24 @@
 
 
 class Rectangle:
-    number_of_instances = 0
-    print_symbol = "#"
-    """__init__ - initialize a rectangle class
+    """Rectangle class created with width and height
 
-    Args:
-        width (int): width of the rectangle
-        height (int): height of the rectangle
+    Attributes:
+        number_of_instance (int): shows the number of instances
+        created and deleted
+        print_symbol (int): symbol for string representation
     """
 
+    number_of_instances = 0
+    print_symbol = "#"
+
     def __init__(self, width=0, height=0):
+        """__init__ - initialize a rectangle class
+
+        Args:
+            width (int): width of the rectangle
+            height (int): height of the rectangle
+        """
         self.height = height
         self.width = width
         Rectangle.number_of_instances += 1

@@ -6,7 +6,7 @@ class Rectangle:
     """Rectangle class created with width and height
 
     Attributes:
-        number_of_instances (int) : shows the number of instances created
+        number_of_instances (int): shows the number of instances created
         and deleted
     """
 
