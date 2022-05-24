@@ -11,6 +11,7 @@ def say_my_name(first_name, last_name=""):
     Raises:
         raise TypeError if first_name and last_name are not strings
     """
+
     if type(first_name) != str:
         raise TypeError("first_name must be a string")
     if type(last_name) != str:

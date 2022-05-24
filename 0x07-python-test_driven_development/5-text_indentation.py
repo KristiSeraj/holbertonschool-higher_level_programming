@@ -9,11 +9,12 @@ def text_indentation(text):
     Raise:
         raises TypeError if text is not a string
     """
+
     if type(text) != str:
         raise TypeError("text must be a string")
     check_space = True
     for char in text:
-        if check_space == True and char == " ":
+        if check_space is True and char == " ":
             continue
         check_space = False
         print(char, end="")

@@ -15,6 +15,7 @@ def matrix_divided(matrix, div):
         raise TypeError if div is not a number
         raise ZeroDivisionError if div is equal to 0
     """
+
     newmatrix = []
     if div == 0:
         raise ZeroDivisionError("division by zero")
