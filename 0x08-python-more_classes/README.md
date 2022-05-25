@@ -4,7 +4,8 @@
 
 - [0-rectangle.py](https://github.com/KristiSeraj/holbertonschool-higher_level_programming/blob/main/0x08-python-more_classes/0-rectangle.py) - Python script that creates empty class `Rectangle` that defines a rectangle.
 
-- [1-rectangle.py](https://github.com/KristiSeraj/holbertonschool-higher_level_programming/blob/main/0x08-python-more_classes/1-rectangle.py) - Python script that creates a class `Rectangle` that defines a rectangle with private instance attribute `width` and `height`.
+- [1-rectangle.py](https://github.com/KristiSeraj/holbertonschool-higher_level_programming/blob/main/0x08-python-more_classes/1-rectangle.py) - Python script that creates a class `Rectangle` that defines a rectangle with:
+     - private instance attribute `width` and `height`.
 
 - [2-rectangle.py](https://github.com/KristiSeraj/holbertonschool-higher_level_programming/blob/main/0x08-python-more_classes/2-rectangle.py) - Python script that creates a class `Rectangle` that defines a rectangle with: 
      - private instance attribute: `width` and `height`
