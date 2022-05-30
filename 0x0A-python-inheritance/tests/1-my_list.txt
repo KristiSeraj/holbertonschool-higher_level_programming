@@ -1,51 +1,45 @@
 Module 1-my_list
 
-def print_sorted(self) prints the list, in ascending sort
+Importing MyList class:
 
 	>>> MyList = __import__('1-my_list').MyList
 
-Should only work with integer
+Usage:
 
-	>>> MyList = __import__('1-my_list').MyList
-	>>> my_list = MyList([1, 3, 2, 4])
-	>>> my_list.print_sorted()
-	[1, 2, 3, 4]
+Can be initialized with no args
 
-All elements of the list should be only integer
-
-	>>> MyList = __import__('1-my_list').MyList
-	>>> my_list = MyList([1, 3, "hi", 4])
-	>>> my_list.print_sorted()
-	Traceback (most recent call last): 
-	TypeError: '<' not supported between instances of 'str' and 'int'
-
-Empty list
-
-	>>> MyList = __import__('1-my_list').MyList
-	>>> my_list = MyList([])
-	>>> my_list.print_sorted()
+	>>> my_list = MyList()
+	>>> print(my_list)
 	[]
 
-All elements of the list are strings
-	
-	>>> MyList = __import__('1-my_list').MyList
-	>>> my_list = MyList(["hi", "Hello", "ok"])
+With elements:
+
+	>>> my_list = MyList([3, 1, 2])
+	>>> print(my_list)
+	[3, 1, 2]
+
+TypeError raised if None is as argument:
+
+	>>> my_list = MyList(None)
+	Traceback (most recent call last):
+	TypeError: 'NoneType' object is not iterable
+
+Inherits methods of class list
+
+	>>> my_list = MyList()
+	>>> my_list.append(1)
+ 	>>> my_list.append(4)
+	>>> my_list.append(2)
+	>>> my_list.remove(2)
+	>>> print(my_list)
+	[1, 4]
+
+	>>> my_list = MyList([1, 4, 2])
 	>>> my_list.print_sorted()
-	['Hello', 'hi', 'ok']
+	[1, 2, 4]
 
-Only 1 argument passed to print_sorted() method
+Also works with strings
 
-	>>> MyList = __import__('1-my_list').MyList
-	>>> my_list = MyList([5, 1, 2])
-	>>> my_list.print_sorted(2)
-	Traceback (most recent call last):
-	TypeError: print_sorted() takes 1 positional argument but 2 were given
-
-Giving two list
-
-	>>> MyList = __import__('1-my_list').MyList
-	>>> my_list = MyList([2, 1, 3], [5, 1, 2])
-	Traceback (most recent call last):
-	TypeError: list expected at most 1 argument, got 2
-	
-	
+	>>> my_list = MyList(["ok", "hi", "hello"])
+	>>> my_list.print_sorted()
+	['hello', 'hi', 'ok']
