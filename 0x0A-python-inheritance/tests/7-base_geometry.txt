@@ -94,3 +94,6 @@ Integer validator:
 	>>> bg = BaseGeometry()
 	>>> type(bg) == BaseGeometry
 	True
+
+	>>> bg = BaseGeometry()
+	>>> bg.integer_validator("age", 10)
