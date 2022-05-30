@@ -76,3 +76,7 @@ Also works with strings
 
 	>>> issubclass(list, MyList)
 	False
+
+	>>> my_list = MyList(5)
+	Traceback (most recent call last):
+	TypeError: 'int' object is not iterable
