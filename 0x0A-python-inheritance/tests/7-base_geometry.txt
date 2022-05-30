@@ -1,6 +1,29 @@
 Module 7-base_geometry
 
-def integer_validator(self, name, value) validates value
+Importing:
 
-	>>> integer_validator = __import__('7-base_geometry').BaseGeometry.integer_validator
+	>>> BaseGeometry = __import__('7-base_geometry').BaseGeometry
+
+Usage:
+
+	>>> Bg = BaseGeometry()
+	>>> type(Bg)
+	<class '7-base_geometry.BaseGeometry'>
+
+Integer validator:
+
+	>>> bg = BaseGeometry()
+	>>> bg.integer_validator("age", 0)
+	Traceback (most recent call last):
+	ValueError: age must be greater than 0
+
+	>>> bg = BaseGeometry()
+	>>> bg.integer_validator("age", -12)
+	Traceback (most recent call last):
+	ValueError: age must be greater than 0
+
+	>>> bg = BaseGeometry()
+	>>> bg.integer_validator("age", "hello")
+	Traceback (most recent call last):
+	TypeError: age must be an integer
 
