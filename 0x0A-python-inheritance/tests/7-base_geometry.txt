@@ -90,3 +90,7 @@ Integer validator:
 	>>> bg = BaseGeometry()
 	>>> isinstance(bg, BaseGeometry)
 	True
+
+	>>> bg = BaseGeometry()
+	>>> type(bg) == BaseGeometry
+	True
