@@ -2,7 +2,7 @@ Module 1-my_list
 
 def print_sorted(self) prints the list, in ascending sort
 
-	>>> print_sorted = __import__('1-my_list').MyList.print_sorted
+	>>> MyList = __import__('1-my_list').MyList
 
 Should only work with integer
 
