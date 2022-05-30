@@ -1,0 +1,6 @@
+Module 7-base_geometry
+
+def integer_validator(self, name, value) validates value
+
+	>>> integer_validator = __import__('7-base_geometry').BaseGeometry.integer_validator
+
