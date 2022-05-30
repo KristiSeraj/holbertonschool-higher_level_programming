@@ -15,6 +15,10 @@ Can be initialized with no args
 	>>> print(my_list)
 	[]
 
+	>>> my_list = MyList()
+	>>> my_list.print_sorted()
+	[]
+
 With elements:
 
 	>>> my_list = MyList([3, 1, 2])
