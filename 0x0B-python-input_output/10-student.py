@@ -3,17 +3,7 @@
 
 
 class Student:
-    """Student class
-
-    Attributes:
-        first_name (str): first name of student
-        last_name (str): last name of student
-        age (int): age of student
-    """
-
-    first_name = ""
-    last_name = ""
-    age = 0
+    """Student class"""
 
     def __init__(self, first_name, last_name, age):
         """Initialize a student class"""
