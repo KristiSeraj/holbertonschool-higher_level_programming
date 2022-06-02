@@ -101,12 +101,22 @@ class Rectangle(Base):
             print(' ' * self.x, end="")
             print('#' * self.width)
 
+    def update(self, *args, **kwargs):
+        """Assign an argument to each attribute"""
+        
+        argList = ["id", "width", "height", "x", "y"]
+
+        if args and len(args) != 0:
+            for i in range(len(args)):
+                setattr(self, argList[i], args[i])
+        else:
+            for key, value in kwargs.items():
+                if hasattr(self, key):
+                    setattr(self, key, value)
+
     def __str__(self):
         """Str representation of rectangle"""
 
         return "[Rectangle] ({}) {}/{} - {}/{}".format(self.id,
                                                        self.x, self.y,
                                                        self.width, self.height)
-
-    # def update(self, *args):
-        """Assign an argument to each attribute"""
