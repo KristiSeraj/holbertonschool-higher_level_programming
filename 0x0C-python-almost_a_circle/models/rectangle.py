@@ -114,6 +114,12 @@ class Rectangle(Base):
                 if hasattr(self, key):
                     setattr(self, key, value)
 
+    def to_dictionary(self):
+        """Returns the dictionary representation of the rectangle"""
+
+        return {"id": self.id, "x": self.x, "y": self.y, "width": self.width,
+                                                         "height": self.height}
+
     def __str__(self):
         """Str representation of rectangle"""
 
