@@ -1,4 +1,3 @@
-"README.md" 27L, 1904C                                                                                27,142        Bot
 # Inheritance
 
 - [tests](https://github.com/KristiSeraj/holbertonschool-higher_level_programming/tree/main/0x0A-python-inheritance/tests) - Directory containing test files for Python scripts
