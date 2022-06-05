@@ -78,3 +78,30 @@ class Base:
                 return new_list
         else:
             return []
+
+    # CSV
+
+    @classmethod
+    def save_to_file_csv(cls, list_objs):
+        """Save string representation to CSV file"""
+
+        new_list_csv = []
+        new_csv_file = cls.__name__ + ".csv"
+        if new_list_csv is not None:
+            for el in list_objs:
+                new_list_csv.append(el.to_dictionary())
+        with open(new_csv_file, "w", encoding="utf-8") as file:
+            file.write(cls.to_json_string(new_list_csv))
+
+    @classmethod
+    def load_from_file_csv(cls):
+        """Returns a list of instance"""
+
+        csv_file = cls.__name__ + ".csv"
+        if path.exists(csv_file):
+            with open(csv_file, "r", encoding="utf-8") as file:
+                csv_dict = cls.from_json_string(file.read())
+                csv_list = [cls.create(**csv_inst) for csv_inst in csv_dict]
+                return csv_list
+        else:
+            return []
