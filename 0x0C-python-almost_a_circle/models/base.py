@@ -29,7 +29,7 @@ class Base:
     def to_json_string(list_dictionaries):
         """Returns the JSON string representation of list_dictionaries"""
 
-        if list_dictionaries is None:
+        if list_dictionaries is None or []:
             return "[]"
         else:
             return json.dumps(list_dictionaries)
@@ -45,3 +45,12 @@ class Base:
                 new_list.append(el.to_dictionary())
         with open(new_file, "w", encoding="utf-8") as f:
             f.write(cls.to_json_string(new_list))
+
+    @staticmethod
+    def from_json_string(json_string):
+        """Returns the list of the JSON string representation"""
+
+        if json_string is None or []:
+            return []
+        else:
+            return json.loads(json_string)
