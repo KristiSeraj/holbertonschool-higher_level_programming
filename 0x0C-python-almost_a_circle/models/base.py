@@ -1,6 +1,7 @@
 #!/usr/bin/python3
 """Defines a base module"""
 import json
+from os import path
 
 
 class Base:
@@ -29,7 +30,7 @@ class Base:
     def to_json_string(list_dictionaries):
         """Returns the JSON string representation of list_dictionaries"""
 
-        if list_dictionaries is None or []:
+        if list_dictionaries is None or list_dictionaries is []:
             return "[]"
         else:
             return json.dumps(list_dictionaries)
@@ -50,7 +51,30 @@ class Base:
     def from_json_string(json_string):
         """Returns the list of the JSON string representation"""
 
-        if json_string is None or []:
+        if json_string is None or json_string is []:
             return []
         else:
             return json.loads(json_string)
+
+    @classmethod
+    def create(cls, **dictionary):
+        """Returns an instance with all attributes already set"""
+
+        dummy_instance = cls(1, 1) if cls.__name__ == "Rectangle" else cls(1)
+        dummy_instance.update(**dictionary)
+        return dummy_instance
+
+    @classmethod
+    def load_from_file(cls):
+        """Returns a list of instances"""
+
+        my_file = cls.__name__ + ".json"
+        new_list = []
+        if path.exists(my_file):
+            with open(my_file, "r", encoding="utf-8") as f:
+                new_dict = cls.from_json_string(f.read())
+                for inst in new_dict:
+                    new_list.append(cls.create(**inst))
+                return new_list
+        else:
+            return []
