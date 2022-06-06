@@ -41,7 +41,7 @@ class Base:
 
         new_list = []
         new_file = cls.__name__ + ".json"
-        if new_list is not None:
+        if list_objs is not None:
             for el in list_objs:
                 new_list.append(el.to_dictionary())
         with open(new_file, "w", encoding="utf-8") as f:
