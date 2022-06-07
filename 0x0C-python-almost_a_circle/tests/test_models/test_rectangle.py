@@ -211,5 +211,11 @@ class TestRectangleStr(unittest.TestCase):
         with self.assertRaises(TypeError):
             rect.__str__(1)
 
+class TestRectangleToDict(unittest.TestCase):
+    def test_to_dictionary(self):
+        rect = Rectangle(1, 2, 3, 4, 5)
+        rect_dict = {'id': 5, 'x': 3, 'y': 4, 'width': 1, 'height': 2}
+        self.assertEqual(rect_dict, rect.to_dictionary())
+
 if __name__ == '__main__':
     unittest.main()
