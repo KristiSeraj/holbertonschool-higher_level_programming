@@ -222,5 +222,11 @@ class TestRectangleToDict(unittest.TestCase):
         with self.assertRaises(TypeError):
             rect.to_dictionary(1)
 
+class TestRectangleUpdate(unittest.TestCase):
+    def test_update_zero_arg(self):
+        rect = Rectangle(1, 2, 3, 4, 5)
+        rect.update()
+        self.assertEqual("[Rectangle] (5) 3/4 - 1/2", str(rect))
+
 if __name__ == '__main__':
     unittest.main()
