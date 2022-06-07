@@ -26,40 +26,40 @@ class TestSquare(unittest.TestCase):
         self.assertEqual(5, sq.size)
     def test_size_str(self):
         with self.assertRaisesRegex(TypeError, "width must be an integer"):
-            Square("hello", 2)
+            Square("hello")
     def test_size_none(self):
         with self.assertRaisesRegex(TypeError, "width must be an integer"):
-            Square(None, 2)
+            Square(None)
     def test_size_float(self):
         with self.assertRaisesRegex(TypeError, "width must be an integer"):
-            Square(5.5, 2)
+            Square(5.5)
     def test_size_bool(self):
         with self.assertRaisesRegex(TypeError, "width must be an integer"):
-            Square(True, 2)
+            Square(True)
     def test_size_dict(self):
         with self.assertRaisesRegex(TypeError, "width must be an integer"):
-            Square({"a": 2, "b": 5}, 2)
+            Square({"a": 2, "b": 5})
     def test_size_list(self):
         with self.assertRaisesRegex(TypeError, "width must be an integer"):
-            Square([1, 2, 3], 2)
+            Square([1, 2, 3])
     def test_size_set(self):
         with self.assertRaisesRegex(TypeError, "width must be an integer"):
-            Square({1, 5, 7}, 2)
+            Square({1, 5, 7})
     def test_size_tuple(self):
         with self.assertRaisesRegex(TypeError, "width must be an integer"):
-            Square((1, 2, 3), 2)
+            Square((1, 2, 3))
     def test_size_nan(self):
         with self.assertRaisesRegex(TypeError, "width must be an integer"):
-            Square(float('nan'), 2)
+            Square(float('nan'))
     def test_size_inf(self):
         with self.assertRaisesRegex(TypeError, "width must be an integer"):
-            Square(float('inf'), 2)
+            Square(float('inf'))
     def test_size_negative(self):
         with self.assertRaisesRegex(ValueError, "width must be > 0"):
-            Square(-1, 2)
+            Square(-1)
     def test_size_zero(self):
         with self.assertRaisesRegex(ValueError, "width must be > 0"):
-            Square(0, 2)
+            Square(0)
 
     # x test cases
     def test_get_x(self):
