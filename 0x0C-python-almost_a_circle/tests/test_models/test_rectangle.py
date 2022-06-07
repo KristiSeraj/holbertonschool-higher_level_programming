@@ -222,5 +222,22 @@ class TestRectangleToDict(unittest.TestCase):
         with self.assertRaises(TypeError):
             rect.to_dictionary(1)
 
+class TestRectangleDisplay(unittest.TestCase):
+    # Method for getting value and returning value printed to stdout
+
+    @staticmethod
+    def capt_stdout(rect, method):
+        capt = io.StringIO()
+        sys.stdout = capt
+        method = rect.display()
+        sys.stdout = sys.__stdout__
+        return capt
+    
+    def test_display(self):
+        rect = Rectangle(1, 2, 0, 0, 5)
+        capt = TestRectangleStdout.capt_stdout(rect, "display")
+        tst = "#\n#\n"
+        self.assertEqual(tst, capt.getvalue())
+
 if __name__ == '__main__':
     unittest.main()
