@@ -84,3 +84,29 @@ class TestBaseSaveToFile(unittest.TestCase):
         Rectangle.save_to_file([rect])
         with open("Rectangle.json", "r") as f:
             self.assertTrue(len(f.read()) == 53)
+
+    def test_save_to_file_none(self):
+        Rectangle.save_to_file(None)
+        with open("Rectangle.json", "r") as f:
+            self.assertEqual("[]", f.read())
+
+    def test_save_to_file_empty_list(self):
+        Rectangle.save_to_file([])
+        with open("Rectangle.json", "r") as f:
+            self.assertEqual("[]", f.read())
+
+    def test_save_to_file_sq(self):
+        sq = Square(10, 7, 2, 8)
+        Square.save_to_file([sq])
+        with open("Square.json", "r") as f:
+            self.assertTrue(len(f.read()) == 39)
+            
+    def test_save_to_file_none_sq(self):
+        Square.save_to_file(None)
+        with open("Square.json", "r") as f:
+            self.assertEqual("[]", f.read())
+
+    def test_save_to_file_empty_list_sq(self):
+        Square.save_to_file(None)
+        with open("Square.json", "r") as f:
+            self.assertEqual("[]", f.read())
