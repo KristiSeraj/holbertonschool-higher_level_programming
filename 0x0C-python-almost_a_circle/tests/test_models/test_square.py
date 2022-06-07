@@ -14,7 +14,7 @@ class TestSquare(unittest.TestCase):
     def test_square_one_arg(self):
         sq = Square(1)
         sq1 = Square(2)
-        self.assertSquare(sq.id, sq1.id - 1)
+        self.assertEqual(sq.id, sq1.id - 1)
 
     # size test cases
     def test_get_size(self):
