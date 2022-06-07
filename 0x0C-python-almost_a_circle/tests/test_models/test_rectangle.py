@@ -195,5 +195,11 @@ class TestRectangleArea(unittest.TestCase):
         rect = Rectangle(111111111111, 111111111111, 0, 0, 1)
         self.assertEqual(12345679012320987654321, rect.area())
 
+class TestRectangleStr(unittest.TestCase):
+    def test_str_rect(self):
+        rect = Rectangle(1, 2, 3, 4, 5)
+        st = f"[Rectangle] ({rect.id}) 3/4 - 1/2"
+        self.assertEqual(st, rect.__str__())
+
 if __name__ == '__main__':
     unittest.main()
