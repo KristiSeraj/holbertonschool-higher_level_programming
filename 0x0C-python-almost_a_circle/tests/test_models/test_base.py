@@ -25,3 +25,8 @@ class TestBase(unittest.TestCase):
 
     def test_id_uniq(self):
         self.assertEqual(20, Base(20).id)
+    
+    def test_id_pub(self):
+        base1 = Base(15)
+        base1.id = 20
+        self.assertEqual(20, base1.id)
