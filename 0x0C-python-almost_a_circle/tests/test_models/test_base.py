@@ -55,3 +55,9 @@ class TestBaseCreate(unittest.TestCase):
         rect_dict = rect.to_dictionary()
         rect2 = Rectangle.create(**rect_dict)
         self.assertEqual("[Rectangle] (5) 3/4 - 1/2", str(rect2))
+
+    def test_create_square(self):
+        sq = Square(1, 2, 3, 4)
+        sq_dict = sq.to_dictionary()
+        sq2 = Square.create(**sq_dict)
+        self.assertEqual("[Square] (4) 2/3 - 1", str(sq2))
