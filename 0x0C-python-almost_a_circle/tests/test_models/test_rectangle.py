@@ -187,5 +187,9 @@ class TestRectangleArea(unittest.TestCase):
         rect = Rectangle(5, 10, 0, 0, 1)
         self.assertEqual(50, rect.area())
 
+    def test_area_lg_number(self):
+        rect = Rectangle(111111111111, 111111111111, 0, 0, 1)
+        self.assertEqual(12345679012320987654321, rect.area())
+
 if __name__ == '__main__':
     unittest.main()
