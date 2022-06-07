@@ -229,6 +229,11 @@ class TestRectangleDisplay(unittest.TestCase):
         capture = TestRectangleDisplay.get_stdout(rect, "display")
         self.assertEqual("#\n#\n", capture.getvalue())
 
+    def test_display_rect_width_height_x(self):
+        rect = Rectangle(1, 2, 3, 0, 1)
+        capture = TestRectangleDisplay.get_stdout(rect, "display")
+        self.assertEqual("   #\n   #\n", capture.getvalue())
+
     def test_display_one_arg(self):
         rect = Rectangle(1, 2, 3, 4, 5)
         with self.assertRaises(TypeError):
