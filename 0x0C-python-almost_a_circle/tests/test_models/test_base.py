@@ -45,3 +45,6 @@ class TestBase(unittest.TestCase):
 
     def test_from_json_string_empty_list(self):
         self.assertEqual([], Base.from_json_string("[]"))
+
+    def test_from_json_string_dict(self):
+        self.assertEqual(list, type(Base.from_json_string('[{"id": 89}]')))
