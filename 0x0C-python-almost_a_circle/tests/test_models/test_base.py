@@ -48,3 +48,10 @@ class TestBase(unittest.TestCase):
 
     def test_from_json_string_dict(self):
         self.assertEqual(list, type(Base.from_json_string('[{"id": 89}]')))
+
+class TestBaseCreate(unittest.TestCase):
+    def test_create_rectangle(self):
+        rect = Rectangle(1, 2, 3, 4, 5)
+        rect_dict = rect.to_dictionary()
+        rect2 = Rectangle.create(**rect_dict)
+        self.assertEqual("[Rectangle] (5) 3/4 - 1/2", str(rect2))
