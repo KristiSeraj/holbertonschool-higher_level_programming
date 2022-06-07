@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 """Test module"""
-import io, sys, unittest
+import io, sys, unittest, os
 from models.base import Base
 from models.rectangle import Rectangle
 from models.square import Square
@@ -61,3 +61,26 @@ class TestBaseCreate(unittest.TestCase):
         sq_dict = sq.to_dictionary()
         sq2 = Square.create(**sq_dict)
         self.assertEqual("[Square] (4) 2/3 - 1", str(sq2))
+
+class TestBaseSaveToFile(unittest.TestCase):
+    # Delete created files
+    @classmethod
+    def tearDown(self):
+        try:
+            os.remove("Rectangle.json")
+        except IOError:
+            pass
+        try:
+            os.remove("Square.json")
+        except IOError:
+            pass
+        try:
+            os.remove("Base.json")
+        except IOError:
+            pass
+
+    def test_save_to_file_rect(self):
+        rect = Rectangle(10, 7, 2, 8, 5)
+        Rectangle.save_to_file([rect])
+        with open("Rectangle.json", "r") as f:
+            self.assertTrue(len(f.read()) == 53)
