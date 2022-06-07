@@ -30,3 +30,6 @@ class TestBase(unittest.TestCase):
         base1 = Base(15)
         base1.id = 20
         self.assertEqual(20, base1.id)
+
+    def test_to_json_string(self):
+        self.assertEqual("[]", Base.to_json_string(None))
