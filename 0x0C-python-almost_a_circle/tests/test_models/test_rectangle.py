@@ -217,5 +217,10 @@ class TestRectangleToDict(unittest.TestCase):
         rect_dict = {'id': 5, 'x': 3, 'y': 4, 'width': 1, 'height': 2}
         self.assertEqual(rect_dict, rect.to_dictionary())
 
+    def test_to_dictionary_one_arg(self):
+        rect = Rectangle(1, 2, 3, 4, 5)
+        with self.assertRaises(TypeError):
+            rect.to_dictionary(1)
+
 if __name__ == '__main__':
     unittest.main()
