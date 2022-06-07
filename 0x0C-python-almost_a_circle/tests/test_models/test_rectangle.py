@@ -228,5 +228,29 @@ class TestRectangleUpdate(unittest.TestCase):
         rect.update()
         self.assertEqual("[Rectangle] (5) 3/4 - 1/2", str(rect))
 
+    def test_update_one_arg(self):
+        rect = Rectangle(1, 2, 3, 4, 5)
+        rect.update(89)
+        self.assertEqual("[Rectangle] (89) 3/4 - 1/2", str(rect))
+ 
+    def test_update_two_arg(self):
+        rect = Rectangle(1, 2, 3, 4, 5)
+        rect.update(89, 10)
+        self.assertEqual("[Rectangle] (89) 3/4 - 10/2", str(rect))
+
+    def test_update_three_arg(self):
+        rect = Rectangle(1, 2, 3, 4, 5)
+        rect.update(89, 10, 20)
+        self.assertEqual("[Rectangle] (89) 3/4 - 10/20", str(rect))
+
+    def test_update_four_arg(self):
+        rect = Rectangle(1, 2, 3, 4, 5)
+        rect.update(89, 10, 20, 30)
+        self.assertEqual("[Rectangle] (89) 30/4 - 10/20", str(rect))
+
+    def test_update_five_arg(self):
+        rect = Rectangle(1, 2, 3, 4, 5)
+        rect.update(89, 10, 20, 30, 40)
+        self.assertEqual("[Rectangle] (89) 30/40 - 10/20", str(rect))
 if __name__ == '__main__':
     unittest.main()
