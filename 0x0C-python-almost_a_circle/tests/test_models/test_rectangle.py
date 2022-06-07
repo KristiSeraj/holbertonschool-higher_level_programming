@@ -8,6 +8,10 @@ from models.rectangle import Rectangle
 
 
 class TestRectangle(unittest.TestCase):
+
+    def test_rect(self):
+        self.assertEqual(5, Rectangle(1, 2, 3, 4, 5).id)
+
     # width test cases
     def test_get_width(self):
         rect = Rectangle(1, 2, 3, 4, 1)
