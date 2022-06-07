@@ -22,3 +22,6 @@ class TestBase(unittest.TestCase):
         base2 = Base()
         base3 = Base()
         self.assertEqual(base1.id, base3.id - 2)
+
+    def test_id_uniq(self):
+        self.assertEqual(20, Base(20).id)
