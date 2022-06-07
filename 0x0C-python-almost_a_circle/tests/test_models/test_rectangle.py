@@ -255,7 +255,7 @@ class TestRectangleUpdate(unittest.TestCase):
 
     def test_update_kwarg_one(self):
         rect = Rectangle(1, 2, 3, 4, 5)
-        rect.update(**{'id':89})
+        rect.update(id=89)
         self.assertEqual("[Rectangle] (89) 3/4 - 1/2", str(rect))
 if __name__ == '__main__':
     unittest.main()
