@@ -20,6 +20,22 @@
     - If `json_string` is `None` or empty, returns an empty list
     - Otherwise, returns the list represented by `json_string`
 
-- [rectangle.py](https://github.com/KristiSeraj/holbertonschool-higher_level_programming/blob/main/0x0C-python-almost_a_circle/models/rectangle.py) - 
+- [rectangle.py](https://github.com/KristiSeraj/holbertonschool-higher_level_programming/blob/main/0x0C-python-almost_a_circle/models/rectangle.py) - Class `Rectangle` that inherits from `Base`:
+  - Private instance attribute, each with its own public getter and setter:
+    - `__width` -> `width`
+    - `__height` -> `height`
+    - `__x` -> `x`
+    - `__y` -> `y`
+  - Class constructor: `def __init__(self, width, height, x=0, y=0, id=None)`:
+  - Calls the super class with `id` - this super call with use the logic of the `__init__` of the `Base` class
+  - Validation of all setter methods and instantiation (`id` excluded):
+    - If the input is not an integer, raises the `TypeError` exception with the message: `<name of the attribute> must be an integer`. Example: `width must be an integer`
+    - If `width` or `height` is under or equals 0, raises the `ValueError` exception with the message: `<name of the attribute> must be > 0`. Example: `width must be > 0`
+    - If `x` or `y` is under 0, raises the `ValueError` exception with the message: `<name of the attribute> must be >= 0`. Example: `x must be >= 0`
+  - Public method `def area(self):` that returns the area value of the `Rectangle` instance
+  - Public method `def display(self):` that prints in stdout the `Rectangle` instance with the character `#`
+  - `__str__` method that returns `[Rectangle] (<id>) <x>/<y> - <width>/<height>`
+  - Public method `def update(self, *args, **kwargs):` that assigns an key/value argument to each attribute
+  - Public method `def to_dictionary(self):` that returns the dictionary representation of a `Rectangle`
 
 - [square.py](https://github.com/KristiSeraj/holbertonschool-higher_level_programming/blob/main/0x0C-python-almost_a_circle/models/square.py) -
