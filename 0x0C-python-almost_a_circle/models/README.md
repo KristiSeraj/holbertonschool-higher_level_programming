@@ -15,10 +15,21 @@
     - The filename is: `<Class name>.json` - example: `Rectangle.json`
     - The static method `to_json_string` (created before) is used
     - If the file already exists, it will be overwritten
-  - Static method `def from_jon_string(json_string):` that returns the list of JSON string representation `json_string`
+  - Static method `def from_json_string(json_string):` that returns the list of JSON string representation `json_string`
     - `json_string` is a string representing a list of dictionaries
     - If `json_string` is `None` or empty, returns an empty list
     - Otherwise, returns the list represented by `json_string`
+  - Class method `def create(cls, **dictionary):` that returns an instance will all attribute already set
+  - Class method `def load_from_file(cls):` that returns a list of instances
+    - The filename is: `<Class name>.json` - example: `Rectangle.json`
+    - If the file doesn't exists, returns an empty list
+    - Otherwise returns a list of instances - the type of these instances depends on `cls` (current class using this method)
+  - Class method `def save_to_file_csv(cls, list_objs):` and `def load_from_file_csv(cls):` that serializes and deserializes in CSV:
+    - The filename must be: `<Class name>.csv` - example: `Rectangle.csv`
+    - Has the same behavior as the JSON serialization/deserialization
+    - Format of the CSV:
+      - Rectangle: `<id>,<width>,<height>,<x>,<y>`
+      - Square: `<id>,<size>,<x>,<y>`
 
 - [rectangle.py](https://github.com/KristiSeraj/holbertonschool-higher_level_programming/blob/main/0x0C-python-almost_a_circle/models/rectangle.py) - Class `Rectangle` that inherits from `Base`:
   - Private instance attribute, each with its own public getter and setter:
@@ -38,4 +49,20 @@
   - Public method `def update(self, *args, **kwargs):` that assigns an key/value argument to each attribute
   - Public method `def to_dictionary(self):` that returns the dictionary representation of a `Rectangle`
 
-- [square.py](https://github.com/KristiSeraj/holbertonschool-higher_level_programming/blob/main/0x0C-python-almost_a_circle/models/square.py) -
+- [square.py](https://github.com/KristiSeraj/holbertonschool-higher_level_programming/blob/main/0x0C-python-almost_a_circle/models/square.py) - Class `Square` that inherits from `Rectangle` class
+  - Class constructor `def __init__(self, size, x=0, y=0, id=None):`
+    - Calls the super class  with `id`, `x`, `y`, `width` and `height` - this super call will use the logic of the `__init__` of the `Rectangle` class. The `width` and `height` must be assigned to the value of `size`.
+    - All `width`, `height`, `x` and `y` validation inherits from `Rectangle` - same behavior in case of wrong data
+  - The overloading `__str__` method returns `[Square] (<id>) <x>/<y> - <size>` - in our case, `width` or `height`
+  - Public setter and getter `size`
+    - The setter assigns (in this order) the `width` and the `height` - with the same value
+    - The setter has the same value validation as the `Rectangle` for `width` and `height`
+    - The same exception error message (the one from `width`)
+  - Public method `def update(self, *args, **kwargs):` that assigns attributes
+    - `*args` is the list of arguments - no-keyworded arguments
+      - 1st argument is the `id` attribute
+      - 2st argument is the `size` attribute
+      - 3st argument is the `x` attribute
+      - 4st argument is the `y` attribute
+    - `**kwargs` is skipped if *args exists and is not empty
+  - Public method `def to_dictionary(self):` that returns the dictionary representation of a `Square`
