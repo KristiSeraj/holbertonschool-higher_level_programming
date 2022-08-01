@@ -1,15 +1,7 @@
 #!/usr/bin/node
-const myArgs = process.argv.slice(1);
-let len = 0;
-while (myArgs[len] !== undefined) {
-  len++;
-}
-if (len === 1) {
+const myArg = process.argv[2];
+if (myArg === undefined) {
   console.log('No argument');
 } else {
-  let j = 1;
-  while (j < len) {
-    console.log(myArgs[j]);
-    j++;
-  }
+  console.log(myArg);
 }
