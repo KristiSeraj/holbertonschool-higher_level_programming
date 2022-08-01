@@ -5,7 +5,7 @@ while (myArgs[len] !== undefined) {
   len++;
 }
 if (len === 1) {
-  console.log('No argument found');
+  console.log('No argument');
 } else {
   let j = 1;
   while (j < len) {
