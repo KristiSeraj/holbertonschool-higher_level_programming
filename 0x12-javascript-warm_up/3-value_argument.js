@@ -1,5 +1,15 @@
 #!/usr/bin/node
-const myArg = process.argv.slice(2);
-myArg.forEach((val) => {
-  console.log(`${val}`);
-});
+const myArgs = process.argv.slice(1);
+let len = 0;
+while (myArgs[len] !== undefined) {
+  len++;
+}
+if (len === 1) {
+  console.log('No argument found');
+} else {
+  let j = 1;
+  while (j < len) {
+    console.log(myArgs[j]);
+    j++;
+  }
+}
