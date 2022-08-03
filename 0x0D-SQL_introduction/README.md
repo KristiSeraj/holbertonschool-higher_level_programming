@@ -39,9 +39,9 @@
   - The list is sorted by the number of records (descending)
 
 - [16-no_link.sql](https://github.com/KristiSeraj/holbertonschool-higher_level_programming/blob/main/0x0D-SQL_introduction/16-no_link.sql) - Script that lists all records of the table `second_table` of the database `hbtn_0c_0` in MySQL server.
-- Doesn’t list rows without a `name` value
-- Results displays the score and the name
-- Records are listed by descending score
+  - Doesn’t list rows without a `name` value
+  - Results displays the score and the name
+  - Records are listed by descending score
 
 - [2-remove_databases.sql](https://github.com/KristiSeraj/holbertonschool-higher_level_programming/blob/main/0x0D-SQL_introduction/2-remove_database.sql) - Script that deletes the database `hbtn_0c_0` in MySQL server
   - If the database `hbtn_0c_0` already exists, script should not fail
