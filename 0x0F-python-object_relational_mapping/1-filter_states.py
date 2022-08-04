@@ -10,9 +10,8 @@ if __name__ == '__main__':
     db = MySQLdb.connect(host="localhost", user=sys.argv[1],
                          passwd=sys.argv[2], db=sys.argv[3])
     cr = db.cursor()
-    cr.execute("SELECT * FROM states
-               WHERE name REGEXP '^N'
-               ORDER BY states.id")
+    myQuery = "SELECT * FROM states WHERE name REGEXP '^N' ORDER BY states.id"
+    cr.execute(myQuery)
     res = cr.fetchall()
     for rows in res:
         print(rows)
