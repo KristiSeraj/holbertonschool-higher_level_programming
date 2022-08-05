@@ -14,5 +14,8 @@ if __name__ == "__main__":
     Session = sessionmaker(bind=eng)
     session = Session()
     res = session.query(State).first()
-    print(f"{res.id}: {res.name}")
+    if res:
+        print(f"{res.id}: {res.name}")
+    else:
+        print("Nothing")
     session.close()
