@@ -15,7 +15,6 @@ if __name__ == "__main__":
     Base.metadata.create_all(engine)
     Session = sessionmaker(bind=engine)
     session = Session()
-    s1 = session.add(City(name="San Francisco",
-                          state=State(name="Califronia")))
+    session.add(City(name="San Francisco", state=State(name="Califronia")))
     session.commit()
     session.close()
