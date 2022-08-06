@@ -14,6 +14,8 @@ if __name__ == '__main__':
     cr = db.cursor()
     myQuery = "SELECT * FROM states WHERE name=%(name)s ORDER BY states.id"
     cr.execute(myQuery, {'name': sys.argv[4]})
-    print(cr.fetchone())
+    res = cr.fetchall()
+    for rows in res:
+        print(rows)
     cr.close()
     db.close()
