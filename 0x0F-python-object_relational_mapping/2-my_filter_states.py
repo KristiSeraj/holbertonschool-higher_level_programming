@@ -14,7 +14,7 @@ if __name__ == '__main__':
     myQuery = " ".join([
         "SELECT * FROM states",
         "WHERE name LIKE BINARY '{}'",
-        "ORDER BY states.id",
+        "ORDER BY id ASC",
         ]).format(sys.argv[4])
     cr.execute(myQuery)
     res = cr.fetchone()
