@@ -17,7 +17,8 @@ if __name__ == '__main__':
         "ORDER BY id ASC",
         ]).format(sys.argv[4])
     cr.execute(myQuery)
-    res = cr.fetchone()
-    print(res)
+    res = cr.fetchall()
+    for rows in res:
+        print(rows)
     cr.close()
     db.close()
