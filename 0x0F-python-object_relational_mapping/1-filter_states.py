@@ -11,7 +11,7 @@ if __name__ == '__main__':
                          user=sys.argv[1], passwd=sys.argv[2],
                          db=sys.argv[3], charset="utf8")
     cr = db.cursor()
-    myQuery = "SELECT * FROM states WHERE name REGEXP '^N' ORDER BY id ASC"
+    myQuery = "SELECT * FROM states WHERE name LIKE BINARY 'N%' ORDER BY id ASC"
     cr.execute(myQuery)
     res = cr.fetchall()
     for rows in res:
