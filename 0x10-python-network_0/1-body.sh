@@ -1,3 +1,3 @@
 #!/bin/bash
 # Displays only body of a 200 status code response
-curl -L "$1"
+curl -sL "$1"
