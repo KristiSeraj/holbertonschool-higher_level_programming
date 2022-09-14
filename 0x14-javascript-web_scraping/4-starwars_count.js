@@ -7,7 +7,9 @@ axios.get(process.argv[2])
   .then(function (response) {
     response.data.results.forEach(element => {
       element.characters.forEach(movies => {
-        movies.includes('18') ? count++ : count;
+        if (movies.includes('18')) {
+          count++;
+        }
       });
     });
     console.log(count);
