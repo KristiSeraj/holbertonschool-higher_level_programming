@@ -1,2 +1,1 @@
-const el = document.getElementsByTagName("header");
-el[0].style.color = '#FF0000';
+document.querySelector("header").style.color = '#FF0000';
